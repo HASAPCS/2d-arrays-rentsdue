@@ -56,20 +56,18 @@ public class TwoDArrayOperations {
 
     // Exercise 6: Flatten a 2D Array into 1D Array
     public static int[] flattenArray(int[][] array) {
-        int x=0;
-        int y=0;
-        for (int i=0; i<array.length; i++) {
-            x++;
-            for (int j=0; j<array[i].length; j++) {
-                y++;
+        int count=0;
+        for (int[] puta: array) {
+            for (int num: puta) {
+                count++;
             }
         }
-        int[] newArray= new int[x*y];
-        int count=0;
+        int[] newArray= new int[count];
+        int dummy=0;
         for (int i=0; i<array.length; i++) {
             for (int j=0; j<array[i].length; j++) {
-                array[i][j]= newArray[count];
-                count++;
+                newArray[dummy]=array[i][j];
+                dummy++;
             }
         }
 
