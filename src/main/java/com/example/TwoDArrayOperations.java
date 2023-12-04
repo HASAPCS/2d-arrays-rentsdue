@@ -36,11 +36,11 @@ public class TwoDArrayOperations {
     public static double calculateAverage(int[][] array) {
         int sum=0;
         double avg=0;
-        for (int [] Hitler: array) {
-            for (int num: Hitler) {
+        for (int [] H: array) {
+            for (int num: H) {
                 sum +=num;
             }
-        avg=sum/(array.length*Hitler.length);
+        avg=sum/(array.length*H.length);
         }
         return avg; 
     }
@@ -56,6 +56,23 @@ public class TwoDArrayOperations {
 
     // Exercise 6: Flatten a 2D Array into 1D Array
     public static int[] flattenArray(int[][] array) {
-        return new int[0]; 
+        int x=0;
+        int y=0;
+        for (int i=0; i<array.length; i++) {
+            x++;
+            for (int j=0; j<array[i].length; j++) {
+                y++;
+            }
+        }
+        int[] newArray= new int[x*y];
+        int count=0;
+        for (int i=0; i<array.length; i++) {
+            for (int j=0; j<array[i].length; j++) {
+                array[i][j]= newArray[count];
+                count++;
+            }
+        }
+
+        return newArray;
     }
 }
