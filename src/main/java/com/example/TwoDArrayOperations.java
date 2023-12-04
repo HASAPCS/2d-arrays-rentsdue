@@ -57,8 +57,8 @@ public class TwoDArrayOperations {
     // Exercise 6: Flatten a 2D Array into 1D Array
     public static int[] flattenArray(int[][] array) {
         int count=0;
-        for (int[] puta: array) {
-            for (int num: puta) {
+        for (int[] put: array) {
+            for (int num: put) {
                 count++;
             }
         }
