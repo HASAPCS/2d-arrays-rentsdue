@@ -34,19 +34,28 @@ public class TwoDArrayOperations {
 
     // Exercise 4: Calculate the Average of All Elements in a 2D Array
     public static double calculateAverage(int[][] array) {
-        // TODO: Implement the logic to calculate the average of all elements in the 2D array.
-        return 0.0; // Placeholder return value
+        int sum=0;
+        double avg=0;
+        for (int [] Hitler: array) {
+            for (int num: Hitler) {
+                sum +=num;
+            }
+        avg=sum/(array.length*Hitler.length);
+        }
+        return avg; 
     }
 
     // Exercise 5: Sum of Diagonal Elements in a 2D Array
     public static int sumDiagonal(int[][] array) {
-        // TODO: Calculate and return the sum of diagonal elements in the 2D array.
-        return 0; // Placeholder return value
+        int sum=0;
+        for (int i=0; i<array.length; i++) {
+            sum +=array[i][i];
+            }
+        return sum; 
     }
 
     // Exercise 6: Flatten a 2D Array into 1D Array
     public static int[] flattenArray(int[][] array) {
-        // TODO: Implement the logic to flatten the 2D array into a 1D array.
-        return new int[0]; // Placeholder return value
+        return new int[0]; 
     }
 }
